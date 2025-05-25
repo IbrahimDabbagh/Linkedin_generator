@@ -1,7 +1,6 @@
 import streamlit as st
 import requests
 import json
-from dotenv import load_dotenv
 import os
 
 # Get API key from environment variable
