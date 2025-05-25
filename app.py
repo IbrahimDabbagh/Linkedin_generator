@@ -6,6 +6,8 @@ import os
 # Get API key from environment variable
 API_KEY = os.environ.get("OPENROUTER_API_KEY", "")  # "" as fallback if not found
 
+if(API_KEY == ""):
+    st.write("There is an error finding the API Key")
 # Set up the UI
 st.set_page_config(page_title="LinkedIn Post Generator", page_icon="✍️")
 st.title("✍️ LinkedIn Post Generator")
