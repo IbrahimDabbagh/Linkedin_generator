@@ -4,9 +4,8 @@ import json
 from dotenv import load_dotenv
 import os
 
-# Load environment variables
-load_dotenv()
-API_KEY = os.getenv("OPENROUTER_API_KEY")
+# Get API key from environment variable
+API_KEY = os.environ.get("OPENROUTER_API_KEY", "")  # "" as fallback if not found
 
 # Set up the UI
 st.set_page_config(page_title="LinkedIn Post Generator", page_icon="✍️")
